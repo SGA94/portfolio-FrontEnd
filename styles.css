@@ -1,0 +1,34 @@
+/* Estilo de la barra de navegacion */
+.navbar {
+  width: 100%;
+  background-color: navy;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links con raton encima */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Actual/Activa navbar link */
+.active {
+  background-color: rgb(122, 122, 122);
+}
+
+/* Agregue capacidad de respuesta: mostrará automáticamente la barra de navegación verticalmente en lugar de horizontalmente en pantallas de menos de 500 píxeles */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}

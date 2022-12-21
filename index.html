@@ -1,21 +1,50 @@
-<!-- DOCTYPE es el tipo de documento, es esta caso un html5-->
+<!-- DOCTYPE informa al navegador que version de HTML se uso para escribir el archivo. Es una declaracion, no una etiqueta -->
 <!DOCTYPE html>
-<!-- HTML es el elemento que encierra todo el contenido de la página-->
-<html lang="en">
+<!-- HTML es el elemento que encierra todo el contenido de la página. En muchos casos se lo conoce como elemento raiz-->
+<html lang="es">
 <!-- HEAD contiene todo aquello que esta en incluido en html pero que no es visible para los visitantes-->
-<head>
-<!-- META la etiqueta meta permite agregar informacion adicional como autor, lista de palabras claves, fecha de caducidad, etc-->
-<meta charset="utf-8">
-<title>Portfolio SGA</title>
-<!--
-<meta name="description" content="Roughly 155 characters">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="script.js"></script>
--->
-</head>
-<body>
-    <h1>Bienvenidos a HTML!!</h1>
-    <p>Primera parte creando nuestra página.</p>
-</body>
+  <head>
+  <!-- META la etiqueta meta permite agregar informacion adicional como autor, lista de palabras claves, fecha de caducidad, etc-->
+  <meta charset="utf-8">
+  <title>Portfolio SGA</title>
+  <!-- link hacia libreria externa para menu de navegacion-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- LINK nos permite ingresar, en este caso, un archivo css para los estilos que vamos a usar-->
+  <link href="styles.css" rel="stylesheet">
+  <!--
+  <meta name="description" content="Roughly 155 characters">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  -->
+  </head>
+  <!-- NAV es un elemento en el cual ubicaremos enlaces de navegacion-->
+  <nav>
+    <!-- Menu navegador barra responsivo-->
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#proyectos"><i class="fa fa-fw fa-android"></i> Proyect</a>
+      <a href="#about"><i class="fa fa-fw fa-android"></i> About</a>
+      <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    </div>
+  </nav>
+  <!-- BODY es una etiqueta que cierra todo lo que sera visible en el navegador por el usuario-->
+  <body>
+    <h1 id="home">Mi primer Portfolio</h1>
+    <img>
+    <!-- MAIN nos indica cual es el contenido principal del sitio-->
+    <main>
+      <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" rel="noopener noreferrer"><img src="img/arg-programa.png" alt="Logo argentina programa"></a>
+      <p>Mi perfil como desarrollador</p>
+    </main>
+    <h2 id="about">Experiencia</h2>
+    <p>Aqui vamos a detallar la Experiencia</p>
+    <h2>Educación</h2>
+    <p>Aqui vamos a detallar nuestro nivel educativo</p>
+    <h2>Hard & Soft Skills</h2>
+    <p>Aqui mediante una visualizacion atractiva mostraremos nuestraa habilidades duras y blandas como asi tambien dominio de lenguajes e idiomas</p>
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Aqui colocaremos los proyectos que hemos realizado o en los que estamos involucrados con evidencia, incluyendo este protfolio</p>
+  </body> 
 </html> 
