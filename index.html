@@ -7,6 +7,7 @@
   <!-- META la etiqueta meta permite agregar informacion adicional como autor, lista de palabras claves, fecha de caducidad, etc-->
   <meta charset="utf-8">
   <title>Portfolio SGA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- link hacia libreria externa para menu de navegacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- LINK nos permite ingresar, en este caso, un archivo css para los estilos que vamos a usar-->
@@ -15,13 +16,16 @@
   <!-- NAV es un elemento en el cual ubicaremos enlaces de navegacion-->
   <nav>
     <!-- Menu navegador barra responsivo-->
-    <div class="navbar">
+    <div class="topnav" id="myTopnav">
       <a id="a-img-argprog" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" rel="noopener noreferrer"><img id="img-argprog" src="img/arg-programa.png" alt="Logo argentina programa"></a>
-      <a class="active" href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-      <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      <a href="#proyectos"><i class="fa fa-fw fa-android"></i> Proyect</a>
-      <a href="#about"><i class="fa fa-fw fa-android"></i> About</a>
-      <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#perfil" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i>Login</a>
+      <a href="#about"><i class="fa fa-fw fa-info-circle"></i>About</a>
+      <a href="#proyects"><i class="fa fa-fw fa-product-hunt"></i>Proyectos</a>
+      <a href="#contact"><i class="fa fa-fw fa-address-book"></i>Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </nav>
   <!-- BODY es una etiqueta que cierra todo lo que sera visible en el navegador por el usuario-->
@@ -48,7 +52,7 @@
     <hr>
     <!-- Bloque Proyect -->
     <div>
-      <h2 id="proyectos">Proyectos</h2>
+      <h2 id="proyects">Proyectos</h2>
       <p>Aqui colocaremos los proyectos que hemos realizado o en los que estamos involucrados con evidencia, incluyendo este protfolio</p>
     </div>
     <hr>
