@@ -3,8 +3,10 @@ body {
   margin: 10px;
   padding: 0;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black, navy;
   background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(168, 168, 253, 0.397));
-  background-color: black;
   color: white;
 }
 
@@ -13,11 +15,7 @@ hr {
   border: 2px solid white;
 }
 
-/* Estilo de la barra de navegacion */
-.navbar {
-  width: 100%;
-  overflow: auto;
-}
+
 /* Link Argprog */
 #a-img-argprog {
   float: left;
@@ -100,12 +98,14 @@ hr {
 }
 
 /* Perfi */
-main {
+#perfil {
   display: flex;
-  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  gap: 20px;
 }
 
-#img-perfil {
+.img-perfil {
   width: 150px;
 }
 
