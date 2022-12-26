@@ -1,38 +1,44 @@
 /* Background & font */
-body {
+.general {
   margin: 10px;
   padding: 0;
-  box-sizing: border-box;
+  background-color: black;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: black, navy;
-  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(168, 168, 253, 0.397));
-  color: white;
+  box-sizing: border-box;
+  background-image: linear-gradient(#0000ffde, rgba(168, 168, 253, 0.644));
+  color: #f2f2f2;
 }
 
 /* Barras separacion */
-hr {
-  border: 2px solid white;
+.barsep {
+  border: 2px solid #f2f2f2;
+}
+/* Barra navegacion y link argprog */
+.menu-link-sup {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-/* Link Argprog */
-#a-img-argprog {
-  float: left;
-}
-
-#img-argprog {
+.argprog-sup img {
+  margin: 0;
+  padding: 7px;
   width: 100px;
   border-width: 1px;
-  background-color: white;
+  background-color: #f2f2f2;
   border-style: solid;
 }
 
+.argprog-sup h6 {
+  margin: 2px;
+  color: #f2f2f2;
+  font-family: sans-serif;
+  text-decoration: none;
+}
 /* Background topnav */
 .topnav {
   overflow: hidden;
 }
-
 /* Estilo link topnav */
 .topnav a {
   float: right;
@@ -46,25 +52,25 @@ hr {
 
 /* Color links con mouse encima */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #f2f2f2;
   color: rgb(0, 5, 48);
 }
 
 /* Color iconos links con mouse encima */
 .topnav a:hover i {
-  background-color: #ddd;
+  background-color: #f2f2f2;
   color: rgb(0, 5, 48);
 }
 
 /* Background link activo */
 .topnav a.active {
-  background-color: #ddd;
+  background-color: #f2f2f2;
   color: rgb(0, 5, 48);
 }
 
 /* Background icono link activo */
 .topnav a.active i {
-  background-color: #ddd;
+  background-color: #f2f2f2;
   color: rgb(0, 5, 48);
 }
 
@@ -74,16 +80,16 @@ hr {
 }
 
 /* Cuando la pantalla tenga menos de 600 píxeles de ancho, oculta todos los enlaces, excepto el primero ("Inicio"). Mostrar el enlace que contiene debe abrir y cerrar el topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+@media screen and (max-width:800px) {
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
 
-/* La clase "responsiva" se agrega a la navegación superior con JavaScript cuando el usuario hace clic en el icono. Esta clase hace que la navegación superior se vea bien en pantallas pequeñas (muestra los enlaces verticalmente en lugar de horizontalmente) */
-@media screen and (max-width: 600px) {
+ /* La clase "responsiva" se agrega a la navegación superior con JavaScript cuando el usuario hace clic en el icono. Esta clase hace que la navegación superior se vea bien en pantallas pequeñas (muestra los enlaces verticalmente en lugar de horizontalmente) */
+@media screen and (max-width: 800px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -95,7 +101,7 @@ hr {
     display: block;
     text-align: left;
   }
-}
+} 
 
 /* Perfi */
 #perfil {
@@ -105,10 +111,161 @@ hr {
   gap: 20px;
 }
 
+#perfil p {
+  font-family: 'Tangerine', cursive;
+  font-size: 70px;
+  color: #f2f2f2;
+}
+
 .img-perfil {
   width: 150px;
 }
 
+/* About */
+/* Hard & Soft Skill */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress{
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  position: relative;
+}
+.progress:after{
+  content: "";
+  border-radius: 50%;
+  border: 15px solid #f2f5f5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  border-width: 15px;
+  border-style: solid;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+  font-size: 24px;
+  color: rgb(250, 245, 245);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+}
+@keyframes loading-2{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+@keyframes loading-4{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+  }
+}
+@keyframes loading-5{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+  }
+}
+.progress.blue .progress-bar{
+  border-color: #26abfd;
+}
+.progress.blue .progress-left .progress-bar{
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar{
+  border-color: #fdc426;
+}
+.progress.yellow .progress-left .progress-bar{
+  animation: loading-3 1s linear forwards 1.8s;
+}
+.progress.pink .progress-bar{
+  border-color: #f83754;
+}
+.progress.pink .progress-left .progress-bar{
+  animation: loading-4 0.4s linear forwards 1.8s;
+}
 /*Pie de página */
 footer a {
   text-decoration: none;
