@@ -13,7 +13,7 @@
     <!-- Cambia icono de titulo -->
     <link rel="shortcut icon" href="img/owl icon pag blanco.png" type="image/x-icon">
     <!-- Link fuentes Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Allura&family=Fira+Sans+Extra+Condensed:ital@1&family=Orbitron&display=swap" rel="stylesheet">
   </head>
   <body class="general">
     <header class="menu-link-sup">
@@ -31,13 +31,43 @@
       </nav>  
     </header>
     <!-- MAIN ubicaremos el contenido principal del sitio-->
-    <main id="perfil">
-        <img class="img-perfil" src="/img/perfil.jpg" alt="foto-perfil">
-        <p>Piensa,Imagina,Sueña...Programa</p>
+    <main class="principal">
+      <div class="container">
+        <div class="row-perfil">
+          <div class="col-sm-5">
+            <div class="imagen-perfil">
+              <img src="/img/perfil.jpg" alt="foto-perfil">
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <p class="nombre"><strong>SOLIZ, GABRIEL ALEJANDRO</strong></p>
+            <p class="titulo-dev">Full Stack Developer JR.</p>  
+          </div>
+        </div>
+      </div>
     </main>
+    <hr class="barsep">
+    <h2>Piensa,Imagina,Sueña...Programa</h2>
+    <div class="container">
+      <div class="row oficio">
+        <div class="col">
+          <img src="/img/electronic.png" alt="icon-elect">
+          <h3>Técnico Electrónico</h3>
+        </div>
+        <div class="col">
+          <img src="/img/developer.png" alt="icon-dev">
+          <h3>Developer</h3>
+        </div>
+        <div class="col">
+          <img src="/img/telecom icon.png" alt="icon-tel">
+          <span>Técnico<br>Telecomunicaciones</span>
+        </div>  
+      </div>
+    </div>
     <hr class="barsep">
     <!-- Bloque About -->
     <div id="about">
+      <h2></h2>
       <h2>Experiencia</h2>
       <p>Aqui vamos a detallar la Experiencia</p>
       <h2>Educación</h2>
@@ -127,8 +157,8 @@
             </div>
           </div>
         </div>
-        </div>
-      </div> 
+      </div>
+    </div> 
     </div>
     <hr class="barsep">
     <!-- Bloque Proyect -->
