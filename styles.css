@@ -138,6 +138,9 @@ a > h6 {
   justify-content: center;
   font-family: 'Allura', cursive;
   font-size: 48px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 .row-perfil {
   display: flex;
@@ -215,6 +218,57 @@ a > h6 {
   gap: 10px;
 }
 
+.container.laboral {
+  width: 100%;
+  margin: 0;
+  padding-top: 20px;
+}
+.container.laboral .row.laboral {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container.laboral .row.laboral .col {
+  display: flex;
+}
+.img-lab {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.container.laboral .row.laboral .col:hover .img-lab {
+  opacity: 0.3;
+  transform: translate(0px, -100px);
+}
+
+.middle {
+  transition: .5s ease;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+}
+
+.container.laboral .row.laboral .col:hover .middle {
+  opacity: .85;
+}
+
+.text-lab {
+  background-color: #f2f2f2;
+  color: rgb(0, 5, 48);
+  font-size: 16px;
+  padding: 5px;
+}
+
 .my-skills {
   display: flex;
   justify-content: center;
@@ -240,20 +294,20 @@ a > h6 {
   align-items: center;
 }
 
-.container .col .progress-html {
+.container .col .progress {
   position: relative;
   width: 150px;
   height: 150px;
 }
 
-.container .col .progress-html svg {
+.container .col .progress svg {
   position: relative;
   width: 150px;
   height: 150px;
   transform: rotate(270deg);
 }
 
-.container .col .progress-html svg circle {
+.container .col .progress svg circle {
   width: 150px;
   height: 150px;
   fill: transparent;
@@ -262,7 +316,7 @@ a > h6 {
   transform: translate(5px,5px);
 }
 
-.container .col .progress-html svg circle:nth-child(2) {
+.container .col .progress svg circle:nth-child(2) {
   stroke: var(--color);
   stroke-dasharray: 440;
   stroke-dashoffset: calc(440 - (440 * var(--num) / 100));
