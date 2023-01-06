@@ -16,10 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Allura&family=Fira+Sans+Extra+Condensed:ital@1&family=Orbitron&display=swap" rel="stylesheet">
   </head>
   <body class="general">
+    <!-- Links logo Argentina Programa -->
     <header class="menu-link-sup">
-      <a class="argprog-sup" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" rel="noopener noreferrer"><img src="img/arg-programa.png" alt="Logo-argentina-programa">
-        <h6>#YoProgramo</h6>
-      </a>
+      <div class="argprog">
+        <a class="argprog-link" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" rel="noopener noreferrer"><img src="img/LOGO argprog.png" alt="Logo-argentina-programa">
+        </a>
+        <div class="yoprog">
+          <a href="https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa" target="_blank" rel="noopener noreferrer">#YoProgramo</a>
+        </div>
+      </div>
       <!-- Menu navegador barra responsivo-->
       <nav class="topnav" id="mytopnav">
         <a href="#perfil" class="active"><i class="fa fa-fw fa-home"></i>Inicio</a>
@@ -30,26 +35,25 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
       </nav>  
     </header>
-    <!-- MAIN ubicaremos el perfil, nombre y perfil profesional del portfolio-->
+    <!-- Nombre y perfil profesional del portfolio-->
     <main class="principal">
-      <div class="container">
+      <div class="container perfil">
         <div class="row-perfil">
-          <div class="col-sm-5">
+          <div class="colum-img">
             <div class="imagen-perfil">
               <img src="/img/perfil.jpg" alt="foto-perfil">
             </div>
           </div>
-          <div class="col-sm-7">
+          <div class="colum-name">
             <p class="nombre"><strong>SOLIZ, GABRIEL ALEJANDRO</strong></p>
             <p class="titulo-dev">Full Stack Developer JR.</p>  
           </div>
         </div>
       </div>
     </main>
-    <hr class="barsep">
-    <h2>Piensa,Imagina,Sueña...Programa</h2>
-    <!-- En este container ubicaremos nuestros titulos/profesiones -->
-    <div class="container">
+    <!-- Titulos -->
+    <div class="container oficio">
+      <h2>Piensa,Imagina,Sueña...Programa</h2>
       <div class="row oficio">
         <div class="col">
           <img src="/img/electronic.png" alt="icon-elect">
@@ -61,14 +65,15 @@
         </div>
         <div class="col">
           <img src="/img/telecom icon.png" alt="icon-tel">
-          <span>Técnico<br>Telecomunicaciones</span>
+          <h3>Técnico Telecomunicaciones</h3>
         </div>  
       </div>
     </div>
     <hr class="barsep">
     <!-- Bloque About -->
     <div id="about">
-      <h2>Experiencia</h2>
+      <!-- Experiencia Laboral -->
+      <h2>Experiencia Laboral</h2>
       <div class="container laboral">
         <div class="row laboral">
           <div class="col">
@@ -78,7 +83,7 @@
             </div>
           </div>
           <div class="col">
-            <img src="/img/logotecnograf.png" alt="img-tecnograf" class="img-lab">
+            <img src="/img/LOGO Tecnograf.png" alt="img-tecnograf" class="img-lab">
             <div class="middle">
               <div class="text-lab"><p>2017 - 2018<br>Técnico Electrónico Viajante<br> Salta-Jujuy, Argentina</p></div>
             </div>
@@ -90,7 +95,7 @@
             </div>
           </div>
           <div class="col">
-            <img src="/img/Logo-Randstad.png" alt="img-randstad" class="img-lab">
+            <img src="/img/LOGO Randstad.png" alt="img-randstad" class="img-lab">
             <div class="middle">
               <div class="text-lab"><p>2020<br>Técnico Electrónico<br> Salta, Argentina</p></div>
             </div>
@@ -103,9 +108,29 @@
           </div>
         </div>
       </div>
-      <h2>Educación</h2>
-      <p>Aqui vamos a detallar nuestro nivel educativo</p>
-      <!-- Menu responsivo con nuestras habilidades -->
+      <!-- Formacion academica -->
+      <h2>Formación Académica</h2>
+      <div class="container educacion">
+        <div class="row educacion">
+          <div class="col">
+            <img src="/img/LOGO 3138.png" alt="ETT 3138">
+            <h3><strong>Técnico Electrónico</strong><br>Esc. de Eduacion Técnica N° 3138<br>2006 - 2012</h3>
+          </div>
+          <div class="col">
+            <img src="/img/univ s21.jpg" alt="siglo21">
+            <h3><strong>Técnico Telecomunicaciones</strong><br>Universidad Siglo 21<br>2021 - Presente</h3>
+          </div>
+          <div class="col">
+            <img src="/img/img dev.jpg" alt="autodidacta">
+            <h3><strong>Autodidacta Phyton</strong><br>Libros e Info Web<br>2021 - Presente</h3>
+          </div>
+          <div class="col">
+            <img src="/img/MINIATURA-ARGEPROGR.jpg" alt="argprog">
+            <h3><strong>Full Stack Developer Jr.</strong><br>Programa #YoProgramo<br>2022 - 2023</h3>
+          </div>
+        </div>
+      </div>  
+      <!-- Menu progresivo con nuestras habilidades -->
       <h2>Skill Set</h2>
       <div class="my-skills">
         <div class="container">
@@ -124,7 +149,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="progress" style="--color:#2b8aff; --num:85; background-color: transparent;">
+              <div class="progress" style="--color:#2b8aff; --num:75; background-color: transparent;">
                 <div class="punto"></div>
                 <svg>
                   <circle cx="70" cy="70" r="70"></circle>
@@ -186,7 +211,7 @@
                 </svg>
                 <div class="numero">
                   <h2>70<span>%</span></h2>
-                  <p>PHOTOSHOP</p>
+                  <p>WORDPRESS</p>
                 </div>
               </div>
             </div>

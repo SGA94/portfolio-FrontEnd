@@ -6,11 +6,23 @@
   flex-wrap: wrap;
   flex-direction: column;
   box-sizing: border-box;
-  background-image: linear-gradient(#00005ede, rgba(60, 60, 99, 0.644));
+  background-image: linear-gradient(#0C0552, #120567);
   color: #f2f2f2;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 } 
+.general h2 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
 
+.general h2:hover {
+  text-decoration: underline;
+}
 /* Barras separacion */
 hr {
   border: 2px solid #f2f2f2;
@@ -22,22 +34,23 @@ hr {
 .menu-link-sup {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-a > h6 {
+.argprog {
+  display: flex;
+  align-items: center;
+}
+
+.argprog .argprog-link img {
+  height: auto;
+  width: 200px;
+}
+
+.argprog .yoprog a {
+  text-decoration: none;
   color: #f2f2f2;
-  font-family: sans-serif;
 }
-
-.argprog-sup img {
-  margin: 0;
-  padding: 7px;
-  width: 100px;
-  border-width: 1px;
-  background-color: #f2f2f2;
-  border-style: solid;
-}
-
 /* Background topnav */
 .topnav {
   overflow: hidden;
@@ -66,17 +79,17 @@ a > h6 {
   color: rgb(0, 5, 48);
 }
 
-/* Background link activo */
+/* Background link activo 
 .topnav a.active {
   background-color: #f2f2f2;
   color: rgb(0, 5, 48);
 }
 
-/* Background icono link activo */
+ Background icono link activo 
 .topnav a.active i {
   background-color: #f2f2f2;
   color: rgb(0, 5, 48);
-}
+} */
 
 /* Oculta enlaces que abren cierran en topnav con pantallas pequeñas */
 .topnav .icon {
@@ -109,12 +122,26 @@ a > h6 {
 
 /* Perfi */
 .principal {
-  margin: 10vh;
+  border: 2px outset white;
+  margin: 10px;
+  display: flex;
+  height: 500px;
+  background-image: url(/img/fondo-perfil.png);
+  background-position: 5% 30%;
+  box-shadow: 0 0 10px #f2f2f2, 0 0 30px #f2f2f2;
+}
+
+.container.perfil {
+  flex-direction: row;
+  justify-content: left;
+  padding: 0;
+}
+
+.row-perfil {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
 }
 
 .imagen-perfil {
@@ -133,40 +160,21 @@ a > h6 {
   font-size: 38px;
 }
 
-.general h2 {
-  display: flex;
-  justify-content: center;
-  font-family: 'Allura', cursive;
-  font-size: 48px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0;
-}
-.row-perfil {
-  display: flex;
-  gap: 15px;
-}
-
 .nombre {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
   font-size: 20px;
   padding-top: 15px;
-  padding-bottom: 10px;
 }
 
 .titulo-dev {
+  text-align: center;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 12px;
   letter-spacing: 0;
   font-family: 'Orbitron', sans-serif;
 }
 
+/* Bloques certificados titulos */
 .container .row.oficio {
   margin: 0;
   padding: 35px;
@@ -185,6 +193,7 @@ a > h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .container .row.oficio .col img {
   padding: 10px;
@@ -195,18 +204,17 @@ a > h6 {
   border: 2px solid #f2f2f2;
 }
 
+.container .row.oficio .col img:hover {
+  border: 2px solid #f2f2f2;
+  box-shadow: 0 0 10px #f2f2f2, 0 0 30px #f2f2f2;
+}
+
 .container .row.oficio .col h3 {
   font-size: 25px;
   padding-top: 15px;
 }
 
-.container .row.oficio .col span {
-  font-size: 25px;
-  padding-top: 15px;
-  text-indent: calc(100px - (83.36px / 2));
-}
 /* About */
-/* Hard & Soft Skill */
 #about {
   margin: 0;
   padding-top: 40px;
@@ -218,6 +226,7 @@ a > h6 {
   gap: 10px;
 }
 
+/* Experiencia laboral */
 .container.laboral {
   width: 100%;
   margin: 0;
@@ -242,14 +251,14 @@ a > h6 {
 }
 
 .container.laboral .row.laboral .col:hover .img-lab {
-  opacity: 0.3;
+  opacity: 0.8;
   transform: translate(0px, -100px);
 }
 
 .middle {
   transition: .5s ease;
   position: absolute;
-  width: 70%;
+  width: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -259,30 +268,70 @@ a > h6 {
 }
 
 .container.laboral .row.laboral .col:hover .middle {
-  opacity: .85;
+  opacity: 1;
 }
 
 .text-lab {
   background-color: #f2f2f2;
   color: rgb(0, 5, 48);
-  font-size: 16px;
+  font-size: 17px;
   padding: 5px;
 }
 
+/* Formacion educativa */
+.container .row.educacion {
+  margin: 0;
+  padding: 35px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.container .row.educacion .col {
+  display: flex;
+  height: auto;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container .row.educacion .col img {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: #f2f2f248;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+}
+
+.container .row.educacion .col h3 {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+/* Skill progrsivo */
 .my-skills {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 40vh;
 }
 
 .container {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+}
+
+.container .row {
+  gap: 50px;
 }
 
 .container .col {
@@ -377,21 +426,26 @@ a > h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 700;
   color: var(--color);
 }
 
 .numero h2 span {
   font-weight: 500;
-  font-size: 0.5em;
+  font-size: 1em;
 }
 
 .numero p {
   font-weight: 500;
-  font-size: 0.8em;
+  font-size: 1.4em;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+#proyects {
+  margin: 0;
+  padding: 0;
 }
 /*Pie de página */
 .footer a {
